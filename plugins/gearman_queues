@@ -12,7 +12,6 @@ class MuninGearmanQueuesPlugin(MuninGearmanPlugin):
 
     def __init__(self):
         super(MuninGearmanQueuesPlugin, self).__init__()
-        self.queues = os.environ['GEARMAN_QUEUES'].split(',')
 
     @property
     def fields(self):
@@ -29,6 +28,7 @@ class MuninGearmanQueuesPlugin(MuninGearmanPlugin):
 
     def execute(self):
         status = self.get_status()
+        self.queues = status.keys()
         values = {}
         for q in self.queues:
             if q in status:
