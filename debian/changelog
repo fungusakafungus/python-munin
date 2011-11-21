@@ -1,0 +1,6 @@
+python-munin (1.1) UNRELEASED; urgency=low
+
+  * Initial release. For list of changes take a look at 
+    https://github.com/Jimdo/python-munin/commits/master
+
+ -- LarsFronius <lars@jimdo.com>  Mon, 21 Nov 2011 14:30:45 +0100
