@@ -12,6 +12,8 @@ class MuninGearmanQueuesPlugin(MuninGearmanPlugin):
 
     def __init__(self):
         super(MuninGearmanQueuesPlugin, self).__init__()
+        status = self.get_status()
+        self.queues = status.keys()
 
     @property
     def fields(self):
