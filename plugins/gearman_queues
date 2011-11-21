@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+#%# family=auto
+#%# capabilities=autoconf
+
 import os
 from munin.gearman import MuninGearmanPlugin
 
@@ -35,6 +38,9 @@ class MuninGearmanQueuesPlugin(MuninGearmanPlugin):
                 for k in self._info_keys:
                     values["%s_%s" % (q.replace('.', '_'), k)] = status[q][k]
         return values
+
+    def autoconf(self):
+        return os.path.isfile('/usr/sbin/gearmand')
 
 if __name__ == "__main__":
     MuninGearmanQueuesPlugin().run()

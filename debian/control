@@ -1,0 +1,15 @@
+Source: python-munin
+Section: net
+Priority: optional
+Maintainer: Lars Fronius (LarsFronius/lars@jimdo.com)
+Build-Depends: python-support (>=0.8), debhelper (>=8.0.0), munin-node (>=1.4)
+XS-Python-Version: >=2.5
+
+Package: python-munin
+Architecture: all
+Homepage: https://github.com/Jimdo/python-munin
+XB-Python-Version: ${python:Versions}
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python module that adds libraries to add support for different munin-plugins
+ Python module that adds some libraries to add support for munin-plugins for several applications
+ Look here for more informations and current development: https://github.com/Jimdo/python-munin
